@@ -1,4 +1,4 @@
-import { Notification } from 'components/Notification/Notification';
+import { Notification } from 'components/Notification';
 import { StatisticContainer, TextWrap, StatisticText } from './styled';
 import PropTypes from 'prop-types';
 

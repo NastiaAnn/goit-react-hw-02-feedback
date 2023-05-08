@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Section } from './SectionTitle/Section';
-import { FeedbackOption } from './FeedbackOptions/FeedbackOptions';
-import { Statistics } from './Statistics/Statistics';
+import { Section } from './Section';
+import { FeedbackOption } from './FeedbackOptions';
+import { Statistics } from './Statistics';
 import PropTypes from 'prop-types';
 
 export class App extends Component {
