@@ -20,7 +20,7 @@ export const Statistics = ({
           <StatisticText>Bad: {bad}</StatisticText>
           <StatisticText>Total: {total}</StatisticText>
           <StatisticText>
-            Positive Percentage: {positivePercentage}
+            Positive Percentage: {positivePercentage} %
           </StatisticText>
         </TextWrap>
       )}
