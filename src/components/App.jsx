@@ -34,6 +34,7 @@ export class App extends Component {
           display: 'flex',
           justifyContent: 'center',
           flexDirection: 'column',
+          gap: '20px',
           alignItems: 'center',
           fontSize: 40,
           color: '#010101',

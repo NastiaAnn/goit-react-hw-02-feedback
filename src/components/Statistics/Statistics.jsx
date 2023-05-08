@@ -1,5 +1,5 @@
-import css from '../Statistics/Statistics.module.css';
 import { Notification } from 'components/Notification/Notification';
+import { StatisticContainer, TextWrap, StatisticText } from './styled';
 import PropTypes from 'prop-types';
 
 export const Statistics = ({
@@ -10,21 +10,21 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <div className={css.statistics}>
+    <StatisticContainer>
       {total === 0 ? (
         <Notification message="There is no feedback" />
       ) : (
-        <div className={css.statistics_wrap}>
-          <p className={css.statistic_text}>Good: {good}</p>
-          <p className={css.statistic_text}>Neutral: {neutral}</p>
-          <p className={css.statistic_text}>Bad: {bad}</p>
-          <p className={css.statistic_text}>Total: {total}</p>
-          <p className={css.statistic_text}>
+        <TextWrap>
+          <StatisticText>Good: {good}</StatisticText>
+          <StatisticText>Neutral: {neutral}</StatisticText>
+          <StatisticText>Bad: {bad}</StatisticText>
+          <StatisticText>Total: {total}</StatisticText>
+          <StatisticText>
             Positive Percentage: {positivePercentage}
-          </p>
-        </div>
+          </StatisticText>
+        </TextWrap>
       )}
-    </div>
+    </StatisticContainer>
   );
 };
 
