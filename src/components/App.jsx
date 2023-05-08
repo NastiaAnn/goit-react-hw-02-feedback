@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import { Section } from './SectionTitle/Section';
 import { FeedbackOption } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
+  static propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  };
   state = {
     good: 0,
     neutral: 0,
@@ -20,6 +26,7 @@ export class App extends Component {
     const totalCount = this.state.good + this.state.neutral + this.state.bad;
     const positivePercentage =
       totalCount === 0 ? 0 : ((this.state.good * 100) / totalCount).toFixed(0);
+
     return (
       <div
         style={{
